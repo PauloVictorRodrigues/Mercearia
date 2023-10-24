@@ -3,7 +3,7 @@ using System.Data.SqlClient;
 
 namespace DAL
 {
-    internal class ClienteDAL
+    public class ClienteDAL
     {
         public void Inserir(Cliente _cliente)
         {
