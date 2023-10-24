@@ -107,7 +107,7 @@ namespace DAL
                 using (SqlDataReader rd = cmd.ExecuteReader())
                 {
                     cliente = new Cliente();
-                    if (rd.Read())
+                    while (rd.Read())
                     {
                         cliente = new Cliente();
                         cliente.Id = (int)rd["Id"];
