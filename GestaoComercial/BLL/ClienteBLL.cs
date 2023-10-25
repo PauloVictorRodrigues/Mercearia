@@ -1,6 +1,4 @@
-﻿
-
-using DAL;
+﻿using DAL;
 using Models;
 
 namespace BLL
@@ -29,6 +27,14 @@ namespace BLL
         public Cliente BuscarPorId(int _id)
         {
             return new ClienteDAL().BuscarPorId(_id);
+        }
+        public List<Cliente> BuscarPorNome(string _nome)
+        {
+            return new ClienteDAL().BuscaPorNome(_nome);
+        }
+        public Cliente BuscarPorNomeCliente(string _nomeCliente)
+        {
+            return new ClienteDAL().BuscarPorNomeCliente(_nomeCliente);
         }
     }
 }
