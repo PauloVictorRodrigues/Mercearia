@@ -3,7 +3,7 @@ using Models;
 
 namespace BLL
 {
-    internal class ClienteBLL
+    public class ClienteBLL
     {
         public void Inserir(Cliente _cliente)
         {
@@ -32,9 +32,9 @@ namespace BLL
         {
             return new ClienteDAL().BuscaPorNome(_nome);
         }
-        public Cliente BuscarPorNomeCliente(string _nomeCliente)
+        public Cliente BuscarPorFone(string _fone)
         {
-            return new ClienteDAL().BuscarPorNomeCliente(_nomeCliente);
+            return new ClienteDAL().BuscarPorFone(_fone);
         }
     }
 }

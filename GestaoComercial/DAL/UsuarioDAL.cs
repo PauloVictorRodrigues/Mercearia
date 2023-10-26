@@ -8,7 +8,7 @@ namespace DAL
     {
         public void Inserir(Usuario _usuario)
         {
-            SqlConnection cn = new SqlConnection(Constantes.StringDeConexao);
+            SqlConnection cn = new SqlConnection(Conexao.StringDeConexao);
 
             try
             {        
@@ -37,7 +37,7 @@ namespace DAL
         }
         public void Alterar(Usuario _usuario)
         {
-            SqlConnection cn = new SqlConnection(Constantes.StringDeConexao);
+            SqlConnection cn = new SqlConnection(Conexao.StringDeConexao);
             try
             {
                 SqlCommand cmd = cn.CreateCommand();
@@ -67,7 +67,7 @@ namespace DAL
         }
         public void Excluir(int _id)
         {
-            SqlConnection cn = new SqlConnection(Constantes.StringDeConexao);
+            SqlConnection cn = new SqlConnection(Conexao.StringDeConexao);
             try
             {
                 SqlCommand cmd = cn.CreateCommand();
@@ -96,7 +96,7 @@ namespace DAL
             List<Usuario> usuarioList= new List<Usuario>();
             Usuario usuario;
             
-            SqlConnection cn = new SqlConnection(Constantes.StringDeConexao);
+            SqlConnection cn = new SqlConnection(Conexao.StringDeConexao);
             try
             {
                 SqlCommand cmd = cn.CreateCommand();
@@ -116,7 +116,7 @@ namespace DAL
             }
             catch (Exception ex)
             {
-                throw new Exception("Ocorreu um erro ao tentar buscar o usuário no banco de dados.", ex);
+                throw new Exception("Ocorreu um erro ao tentar buscar todos os usuários no banco de dados.", ex);
             }
             finally
             {
@@ -127,7 +127,7 @@ namespace DAL
         {
             Usuario usuario;
 
-            SqlConnection cn = new SqlConnection(Constantes.StringDeConexao);
+            SqlConnection cn = new SqlConnection(Conexao.StringDeConexao);
             try
             {
                 SqlCommand cmd = cn.CreateCommand();
@@ -149,7 +149,7 @@ namespace DAL
             }
             catch (Exception ex)
             {
-                throw new Exception("Ocorreu um erro ao tentar buscar o usuário no banco de dados.", ex);
+                throw new Exception("Ocorreu um erro ao tentar buscar o usuário por id no banco de dados.", ex);
             }
             finally
             {
@@ -161,14 +161,14 @@ namespace DAL
             List<Usuario> usuarioList = new List<Usuario>();
             Usuario usuario;
 
-            SqlConnection cn = new SqlConnection(Constantes.StringDeConexao);
+            SqlConnection cn = new SqlConnection(Conexao.StringDeConexao);
             try
             {
                 SqlCommand cmd = cn.CreateCommand();
                 cmd.CommandText = "Select Id, Nome, NomeUsuario, Senha, Ativo From Usuario Where Nome Like @Nome";
                 cmd.CommandType = System.Data.CommandType.Text;
 
-                cmd.Parameters.AddWithValue("@Nome", "" + _nome + "%");
+                cmd.Parameters.AddWithValue("@Nome", "%" + _nome + "%");
 
                 cn.Open();
                 using (SqlDataReader rd = cmd.ExecuteReader())
@@ -204,7 +204,7 @@ namespace DAL
         {
             Usuario usuario;
 
-            SqlConnection cn = new SqlConnection(Constantes.StringDeConexao);
+            SqlConnection cn = new SqlConnection(Conexao.StringDeConexao);
             try
             {
                 SqlCommand cmd = cn.CreateCommand();

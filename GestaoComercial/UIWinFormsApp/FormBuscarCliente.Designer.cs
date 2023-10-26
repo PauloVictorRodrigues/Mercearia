@@ -1,6 +1,6 @@
 ﻿namespace UIWinFormsApp
 {
-    partial class FormBuscarProduto
+    partial class FormBuscarCliente
     {
         /// <summary>
         /// Required designer variable.
@@ -31,11 +31,8 @@
             this.components = new System.ComponentModel.Container();
             this.dataGridViewProduto = new System.Windows.Forms.DataGridView();
             this.nomeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Preco = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Estoque = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.CodigoDeBarras = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.produtoBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.bindingSourceProduto = new System.Windows.Forms.BindingSource(this.components);
+            this.Fone = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.bindingSourceCliente = new System.Windows.Forms.BindingSource(this.components);
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.textBoxBuscarPor = new System.Windows.Forms.TextBox();
@@ -47,8 +44,7 @@
             this.buttonBuscar = new System.Windows.Forms.Button();
             this.comboBoxBuscarPor = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewProduto)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.produtoBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bindingSourceProduto)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSourceCliente)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridViewProduto
@@ -60,17 +56,15 @@
             this.dataGridViewProduto.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewProduto.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.nomeDataGridViewTextBoxColumn,
-            this.Preco,
-            this.Estoque,
-            this.CodigoDeBarras});
-            this.dataGridViewProduto.DataSource = this.bindingSourceProduto;
-            this.dataGridViewProduto.Location = new System.Drawing.Point(4, 184);
+            this.Fone});
+            this.dataGridViewProduto.DataSource = this.bindingSourceCliente;
+            this.dataGridViewProduto.Location = new System.Drawing.Point(0, 189);
             this.dataGridViewProduto.Name = "dataGridViewProduto";
             this.dataGridViewProduto.ReadOnly = true;
             this.dataGridViewProduto.RowHeadersWidth = 51;
             this.dataGridViewProduto.RowTemplate.Height = 29;
             this.dataGridViewProduto.Size = new System.Drawing.Size(836, 225);
-            this.dataGridViewProduto.TabIndex = 14;
+            this.dataGridViewProduto.TabIndex = 25;
             // 
             // nomeDataGridViewTextBoxColumn
             // 
@@ -81,40 +75,18 @@
             this.nomeDataGridViewTextBoxColumn.Name = "nomeDataGridViewTextBoxColumn";
             this.nomeDataGridViewTextBoxColumn.ReadOnly = true;
             // 
-            // Preco
+            // Fone
             // 
-            this.Preco.DataPropertyName = "Preco";
-            this.Preco.HeaderText = "Preco";
-            this.Preco.MinimumWidth = 6;
-            this.Preco.Name = "Preco";
-            this.Preco.ReadOnly = true;
-            this.Preco.Width = 125;
+            this.Fone.DataPropertyName = "Fone";
+            this.Fone.HeaderText = "Fone";
+            this.Fone.MinimumWidth = 6;
+            this.Fone.Name = "Fone";
+            this.Fone.ReadOnly = true;
+            this.Fone.Width = 125;
             // 
-            // Estoque
+            // bindingSourceCliente
             // 
-            this.Estoque.DataPropertyName = "Estoque";
-            this.Estoque.HeaderText = "Estoque";
-            this.Estoque.MinimumWidth = 6;
-            this.Estoque.Name = "Estoque";
-            this.Estoque.ReadOnly = true;
-            this.Estoque.Width = 125;
-            // 
-            // CodigoDeBarras
-            // 
-            this.CodigoDeBarras.DataPropertyName = "CodigoDeBarras";
-            this.CodigoDeBarras.HeaderText = "CodigoDeBarras";
-            this.CodigoDeBarras.MinimumWidth = 6;
-            this.CodigoDeBarras.Name = "CodigoDeBarras";
-            this.CodigoDeBarras.ReadOnly = true;
-            this.CodigoDeBarras.Width = 125;
-            // 
-            // produtoBindingSource
-            // 
-            this.produtoBindingSource.DataSource = typeof(Models.Produto);
-            // 
-            // bindingSourceProduto
-            // 
-            this.bindingSourceProduto.DataSource = typeof(Models.Produto);
+            this.bindingSourceCliente.DataSource = typeof(Models.Cliente);
             // 
             // label2
             // 
@@ -122,78 +94,78 @@
             this.label2.Font = new System.Drawing.Font("Segoe UI", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label2.Location = new System.Drawing.Point(0, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(852, 77);
-            this.label2.TabIndex = 12;
-            this.label2.Text = "Buscar produto";
+            this.label2.Size = new System.Drawing.Size(864, 77);
+            this.label2.TabIndex = 23;
+            this.label2.Text = "Buscar cliente";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(0, 127);
+            this.label1.Location = new System.Drawing.Point(0, 131);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(79, 20);
-            this.label1.TabIndex = 13;
+            this.label1.TabIndex = 24;
             this.label1.Text = "Buscar por";
             // 
             // textBoxBuscarPor
             // 
-            this.textBoxBuscarPor.Location = new System.Drawing.Point(161, 149);
+            this.textBoxBuscarPor.Location = new System.Drawing.Point(157, 153);
             this.textBoxBuscarPor.Name = "textBoxBuscarPor";
             this.textBoxBuscarPor.Size = new System.Drawing.Size(279, 27);
-            this.textBoxBuscarPor.TabIndex = 11;
+            this.textBoxBuscarPor.TabIndex = 22;
             // 
             // buttonSalvar
             // 
-            this.buttonSalvar.Location = new System.Drawing.Point(639, 415);
+            this.buttonSalvar.Location = new System.Drawing.Point(619, 418);
             this.buttonSalvar.Name = "buttonSalvar";
             this.buttonSalvar.Size = new System.Drawing.Size(94, 29);
-            this.buttonSalvar.TabIndex = 5;
+            this.buttonSalvar.TabIndex = 16;
             this.buttonSalvar.Text = "&Salvar";
             this.buttonSalvar.UseVisualStyleBackColor = true;
             // 
             // buttonCancelar
             // 
-            this.buttonCancelar.Location = new System.Drawing.Point(739, 415);
+            this.buttonCancelar.Location = new System.Drawing.Point(719, 418);
             this.buttonCancelar.Name = "buttonCancelar";
             this.buttonCancelar.Size = new System.Drawing.Size(94, 29);
-            this.buttonCancelar.TabIndex = 6;
+            this.buttonCancelar.TabIndex = 17;
             this.buttonCancelar.Text = "&Cancelar";
             this.buttonCancelar.UseVisualStyleBackColor = true;
             // 
             // buttonExcluir
             // 
-            this.buttonExcluir.Location = new System.Drawing.Point(746, 150);
+            this.buttonExcluir.Location = new System.Drawing.Point(742, 154);
             this.buttonExcluir.Name = "buttonExcluir";
             this.buttonExcluir.Size = new System.Drawing.Size(94, 29);
-            this.buttonExcluir.TabIndex = 7;
+            this.buttonExcluir.TabIndex = 18;
             this.buttonExcluir.Text = "E&xcluir";
             this.buttonExcluir.UseVisualStyleBackColor = true;
             // 
             // buttonInserir
             // 
-            this.buttonInserir.Location = new System.Drawing.Point(646, 151);
+            this.buttonInserir.Location = new System.Drawing.Point(642, 154);
             this.buttonInserir.Name = "buttonInserir";
             this.buttonInserir.Size = new System.Drawing.Size(94, 29);
-            this.buttonInserir.TabIndex = 8;
+            this.buttonInserir.TabIndex = 19;
             this.buttonInserir.Text = "&Inserir";
             this.buttonInserir.UseVisualStyleBackColor = true;
             // 
             // buttonAlterar
             // 
-            this.buttonAlterar.Location = new System.Drawing.Point(546, 150);
+            this.buttonAlterar.Location = new System.Drawing.Point(542, 153);
             this.buttonAlterar.Name = "buttonAlterar";
             this.buttonAlterar.Size = new System.Drawing.Size(94, 29);
-            this.buttonAlterar.TabIndex = 9;
+            this.buttonAlterar.TabIndex = 20;
             this.buttonAlterar.Text = "&Alterar";
             this.buttonAlterar.UseVisualStyleBackColor = true;
             // 
             // buttonBuscar
             // 
-            this.buttonBuscar.Location = new System.Drawing.Point(446, 149);
+            this.buttonBuscar.Location = new System.Drawing.Point(442, 153);
             this.buttonBuscar.Name = "buttonBuscar";
             this.buttonBuscar.Size = new System.Drawing.Size(94, 29);
-            this.buttonBuscar.TabIndex = 10;
+            this.buttonBuscar.TabIndex = 21;
             this.buttonBuscar.Text = "&Buscar";
             this.buttonBuscar.UseVisualStyleBackColor = true;
             this.buttonBuscar.Click += new System.EventHandler(this.buttonBuscar_Click);
@@ -203,18 +175,18 @@
             this.comboBoxBuscarPor.FormattingEnabled = true;
             this.comboBoxBuscarPor.Items.AddRange(new object[] {
             "Nome",
-            "Codigo de barras",
+            "Fone",
             "Todos"});
-            this.comboBoxBuscarPor.Location = new System.Drawing.Point(7, 150);
+            this.comboBoxBuscarPor.Location = new System.Drawing.Point(3, 152);
             this.comboBoxBuscarPor.Name = "comboBoxBuscarPor";
             this.comboBoxBuscarPor.Size = new System.Drawing.Size(148, 28);
-            this.comboBoxBuscarPor.TabIndex = 15;
+            this.comboBoxBuscarPor.TabIndex = 26;
             // 
-            // FormBuscarProduto
+            // FormBuscarCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(852, 450);
+            this.ClientSize = new System.Drawing.Size(864, 450);
             this.Controls.Add(this.dataGridViewProduto);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -226,11 +198,10 @@
             this.Controls.Add(this.buttonAlterar);
             this.Controls.Add(this.buttonBuscar);
             this.Controls.Add(this.comboBoxBuscarPor);
-            this.Name = "FormBuscarProduto";
-            this.Text = "FormBuscarProduto";
+            this.Name = "FormBuscarCliente";
+            this.Text = "FormBuscarCliente";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewProduto)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.produtoBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bindingSourceProduto)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSourceCliente)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -239,7 +210,9 @@
         #endregion
 
         private DataGridView dataGridViewProduto;
-        private BindingSource bindingSourceProduto;
+        private DataGridViewTextBoxColumn nomeDataGridViewTextBoxColumn;
+        private DataGridViewTextBoxColumn Fone;
+        private BindingSource bindingSourceCliente;
         private Label label2;
         private Label label1;
         private TextBox textBoxBuscarPor;
@@ -250,10 +223,5 @@
         private Button buttonAlterar;
         private Button buttonBuscar;
         private ComboBox comboBoxBuscarPor;
-        private DataGridViewTextBoxColumn nomeDataGridViewTextBoxColumn;
-        private DataGridViewTextBoxColumn Preco;
-        private DataGridViewTextBoxColumn Estoque;
-        private DataGridViewTextBoxColumn CodigoDeBarras;
-        private BindingSource produtoBindingSource;
     }
 }

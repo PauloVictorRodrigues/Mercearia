@@ -1,10 +1,19 @@
 ﻿using BLL;
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace UIWinFormsApp
 {
-    public partial class FormBuscarProduto : Form
+    public partial class FormBuscarCliente : Form
     {
-        public FormBuscarProduto()
+        public FormBuscarCliente()
         {
             InitializeComponent();
         }
@@ -16,13 +25,13 @@ namespace UIWinFormsApp
                 switch (comboBoxBuscarPor.SelectedIndex)
                 {
                     case 0:
-                        bindingSourceProduto.DataSource = new ProdutoBLL().BuscarPorNome(textBoxBuscarPor.Text);
+                        bindingSourceCliente.DataSource = new ClienteBLL().BuscarPorNome(textBoxBuscarPor.Text);
                         break;
                     case 1:
-                        bindingSourceProduto.DataSource = new ProdutoBLL().BuscarPorCodigoDeBarras(textBoxBuscarPor.Text);
+                        bindingSourceCliente.DataSource = new ClienteBLL().BuscarPorFone(textBoxBuscarPor.Text);
                         break;
                     default:
-                        bindingSourceProduto.DataSource = new ProdutoBLL().BuscarTodos();
+                        bindingSourceCliente.DataSource = new ClienteBLL().BuscarTodos();
                         break;
                 }
             }
