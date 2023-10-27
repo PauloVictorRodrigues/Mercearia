@@ -15,10 +15,18 @@ namespace UIWinFormsApp
     public partial class FormCadastrarUsuario : Form
     {
         private int id;
+
         public FormCadastrarUsuario(int _id = 0)
         {
             InitializeComponent();
             id = _id;
+
+            if (id == 0)
+                bindingSourceCadastro.AddNew();
+
+            else
+                bindingSourceCadastro.DataSource = new UsuarioBLL().BuscarPorId(id);
+
         }
         private void button1_Click(object sender, EventArgs e)
         {
@@ -30,7 +38,7 @@ namespace UIWinFormsApp
                 if (id == 0)
                     new UsuarioBLL().Inserir(usuario);
 
-                else  
+                else
                     new UsuarioBLL().Alterar(usuario);
 
                 MessageBox.Show("Registro salvo com sucesso!");
