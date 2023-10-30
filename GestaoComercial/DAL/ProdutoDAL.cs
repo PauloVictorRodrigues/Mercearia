@@ -13,7 +13,7 @@ namespace DAL
             SqlTransaction transaction = _transaction;
             using (SqlConnection cn = new SqlConnection(Conexao.StringDeConexao))
             {
-                using (SqlCommand cmd = new SqlCommand("Insert into Produto(Nome, Preco, Estoque,CodigoDeBarras Values(@Nome, @Preco, @Estoque, @CodigoDeBarras)"))
+                using (SqlCommand cmd = new SqlCommand("Insert into Produto(Nome, Preco, Estoque,CodigoDeBarras) Values(@Nome, @Preco, @Estoque, @CodigoDeBarras)"))
                 {
                     try
                     {
@@ -50,7 +50,7 @@ namespace DAL
             SqlTransaction transaction = _transaction;
             using (SqlConnection cn = new SqlConnection(Conexao.StringDeConexao))
             {
-                using (SqlCommand cmd = new SqlCommand("Update Produto(Nome = @Nome, Preco = @Preco, Estoque = @Estoque, @CodigoDeBarras = CodigoDeBarras"))
+                using (SqlCommand cmd = new SqlCommand("Update Produto SET Nome = @Nome, Preco = @Preco, Estoque = @Estoque, CodigoDeBarras =  @CodigoDeBarras WHERE Id = @Id"))
                 {
                     try
                     {
@@ -179,8 +179,8 @@ namespace DAL
                         produto = new Produto();
                         produto.Id = (int)rd["Id"];
                         produto.Nome = rd["Nome"].ToString();
-                        produto.Preco = (float)rd["Preco"];
-                        produto.Estoque = (float)rd["Estoque"];
+                        produto.Preco = (double)rd["Preco"];
+                        produto.Estoque = (double)rd["Estoque"];
                         produto.CodigoDeBarras = rd["CodigoDeBarras"].ToString();
                     }
                 }

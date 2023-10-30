@@ -1,8 +1,5 @@
 ﻿using Models;
-using System.Data.Common;
 using System.Data.SqlClient;
-using System.Security.Cryptography;
-using System.Transactions;
 
 namespace DAL
 {
@@ -13,7 +10,7 @@ namespace DAL
             SqlTransaction transaction = _transaction;
             using (SqlConnection cn = new SqlConnection(Conexao.StringDeConexao))
             {
-                using (SqlCommand cmd = new SqlCommand("Insert into Cliente(Nome, Fone Values(@Nome, @Fone"))
+                using (SqlCommand cmd = new SqlCommand("Insert into Cliente(Nome, Fone) Values(@Nome, @Fone)"))
                     try
                     {
                         cmd.CommandType = System.Data.CommandType.Text;
@@ -162,7 +159,7 @@ namespace DAL
             try
             {
                 SqlCommand cmd = cn.CreateCommand();
-                cmd.CommandText = "Select Id, Nome, Fone FROM Cliente";
+                cmd.CommandText = "Select Id, Nome, Fone FROM Cliente Where Id = @Id";
                 cmd.CommandType = System.Data.CommandType.Text;
 
                 cmd.Parameters.AddWithValue("@Id", _id);

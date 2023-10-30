@@ -1,13 +1,16 @@
 ﻿using BLL;
 using Models;
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Security.Cryptography;
 
 namespace UIWinFormsApp
 {
-    public partial class FormCadastrarUsuario : Form
+    public partial class FormCadastrarProduto : Form
     {
         private int id;
-
-        public FormCadastrarUsuario(int _id = 0)
+        public FormCadastrarProduto(int _id = 0)
         {
             InitializeComponent();
             id = _id;
@@ -16,27 +19,26 @@ namespace UIWinFormsApp
                 bindingSourceCadastro.AddNew();
 
             else
-                bindingSourceCadastro.DataSource = new UsuarioBLL().BuscarPorId(id);
+                bindingSourceCadastro.DataSource = new ProdutoBLL().BuscarPorId(id);
         }
         private void button1_Click(object sender, EventArgs e)
         {
             try
             {
                 bindingSourceCadastro.EndEdit();
-                Usuario usuario = (Usuario)bindingSourceCadastro.Current;
+                Produto produto = (Produto)bindingSourceCadastro.Current;
 
                 if (id == 0)
-                    new UsuarioBLL().Inserir(usuario);
+                    new ProdutoBLL().Inserir(produto);
 
                 else
-                    new UsuarioBLL().Alterar(usuario);
+                    new ProdutoBLL().Alterar(produto);
 
                 MessageBox.Show("Registro salvo com sucesso!");
                 this.Close();
             }
             catch (Exception ex)
             {
-
                 MessageBox.Show(ex.Message);
             }
         }

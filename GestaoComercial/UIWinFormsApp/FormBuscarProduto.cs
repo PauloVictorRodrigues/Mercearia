@@ -1,4 +1,5 @@
 ﻿using BLL;
+using Models;
 
 namespace UIWinFormsApp
 {
@@ -8,7 +9,6 @@ namespace UIWinFormsApp
         {
             InitializeComponent();
         }
-
         private void buttonBuscar_Click(object sender, EventArgs e)
         {
             try
@@ -30,6 +30,37 @@ namespace UIWinFormsApp
             {
                 MessageBox.Show(ex.Message);
             }
+        }
+        private void buttonInserir_Click(object sender, EventArgs e)
+        {
+            using (FormCadastrarProduto frm = new FormCadastrarProduto())
+            {
+                frm.ShowDialog();
+            }
+        }
+        private void buttonAlterar_Click(object sender, EventArgs e)
+        {
+            int id = ((Produto)bindingSourceProduto.Current).Id;
+            using (FormCadastrarProduto frm = new FormCadastrarProduto(id))
+            {
+                frm.ShowDialog();
+            }
+        }
+        private void buttonExcluir_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Deseja realmente excluir este registro?", "Atenção", MessageBoxButtons.YesNo) == DialogResult.No)
+                return;
+
+            int id = ((Produto)bindingSourceProduto.Current).Id;
+            new ProdutoBLL().Excluir(id);
+            bindingSourceProduto.RemoveCurrent();
+            MessageBox.Show("Registro excluído com sucesso!");
+        }
+
+        private void FormBuscarProduto_Load(object sender, EventArgs e)
+        {
+            comboBoxBuscarPor.SelectedIndex = comboBoxBuscarPor.Items.Count - 1;
+            buttonBuscar_Click(null, null);
         }
     }
 }

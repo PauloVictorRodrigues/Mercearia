@@ -116,7 +116,7 @@
             // 
             // buttonCancelar
             // 
-            this.buttonCancelar.Location = new System.Drawing.Point(719, 418);
+            this.buttonCancelar.Location = new System.Drawing.Point(758, 420);
             this.buttonCancelar.Name = "buttonCancelar";
             this.buttonCancelar.Size = new System.Drawing.Size(94, 29);
             this.buttonCancelar.TabIndex = 17;
@@ -131,6 +131,7 @@
             this.buttonExcluir.TabIndex = 18;
             this.buttonExcluir.Text = "E&xcluir";
             this.buttonExcluir.UseVisualStyleBackColor = true;
+            this.buttonExcluir.Click += new System.EventHandler(this.buttonExcluir_Click);
             // 
             // buttonInserir
             // 
@@ -140,6 +141,7 @@
             this.buttonInserir.TabIndex = 19;
             this.buttonInserir.Text = "&Inserir";
             this.buttonInserir.UseVisualStyleBackColor = true;
+            this.buttonInserir.Click += new System.EventHandler(this.buttonInserir_Click);
             // 
             // buttonAlterar
             // 
@@ -149,6 +151,7 @@
             this.buttonAlterar.TabIndex = 20;
             this.buttonAlterar.Text = "&Alterar";
             this.buttonAlterar.UseVisualStyleBackColor = true;
+            this.buttonAlterar.Click += new System.EventHandler(this.buttonAlterar_Click);
             // 
             // buttonBuscar
             // 
@@ -162,6 +165,7 @@
             // 
             // comboBoxBuscarPor
             // 
+            this.comboBoxBuscarPor.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxBuscarPor.FormattingEnabled = true;
             this.comboBoxBuscarPor.Items.AddRange(new object[] {
             "Nome",
@@ -176,6 +180,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.CancelButton = this.buttonCancelar;
             this.ClientSize = new System.Drawing.Size(864, 450);
             this.Controls.Add(this.dataGridViewProduto);
             this.Controls.Add(this.label2);
@@ -189,6 +194,7 @@
             this.Controls.Add(this.comboBoxBuscarPor);
             this.Name = "FormBuscarCliente";
             this.Text = "FormBuscarCliente";
+            this.Load += new System.EventHandler(this.FormBuscarCliente_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewProduto)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSourceCliente)).EndInit();
             this.ResumeLayout(false);

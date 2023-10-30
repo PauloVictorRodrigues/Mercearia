@@ -35,7 +35,6 @@
             this.Estoque = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CodigoDeBarras = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.bindingSourceProduto = new System.Windows.Forms.BindingSource(this.components);
-            this.produtoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.textBoxBuscarPor = new System.Windows.Forms.TextBox();
@@ -47,7 +46,6 @@
             this.comboBoxBuscarPor = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewProduto)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSourceProduto)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.produtoBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridViewProduto
@@ -111,10 +109,6 @@
             // 
             this.bindingSourceProduto.DataSource = typeof(Models.Produto);
             // 
-            // produtoBindingSource
-            // 
-            this.produtoBindingSource.DataSource = typeof(Models.Produto);
-            // 
             // label2
             // 
             this.label2.Dock = System.Windows.Forms.DockStyle.Top;
@@ -159,6 +153,7 @@
             this.buttonExcluir.TabIndex = 7;
             this.buttonExcluir.Text = "E&xcluir";
             this.buttonExcluir.UseVisualStyleBackColor = true;
+            this.buttonExcluir.Click += new System.EventHandler(this.buttonExcluir_Click);
             // 
             // buttonInserir
             // 
@@ -168,6 +163,7 @@
             this.buttonInserir.TabIndex = 8;
             this.buttonInserir.Text = "&Inserir";
             this.buttonInserir.UseVisualStyleBackColor = true;
+            this.buttonInserir.Click += new System.EventHandler(this.buttonInserir_Click);
             // 
             // buttonAlterar
             // 
@@ -177,6 +173,7 @@
             this.buttonAlterar.TabIndex = 9;
             this.buttonAlterar.Text = "&Alterar";
             this.buttonAlterar.UseVisualStyleBackColor = true;
+            this.buttonAlterar.Click += new System.EventHandler(this.buttonAlterar_Click);
             // 
             // buttonBuscar
             // 
@@ -204,6 +201,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.CancelButton = this.buttonCancelar;
             this.ClientSize = new System.Drawing.Size(852, 450);
             this.Controls.Add(this.dataGridViewProduto);
             this.Controls.Add(this.label2);
@@ -217,9 +215,9 @@
             this.Controls.Add(this.comboBoxBuscarPor);
             this.Name = "FormBuscarProduto";
             this.Text = "FormBuscarProduto";
+            this.Load += new System.EventHandler(this.FormBuscarProduto_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewProduto)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSourceProduto)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.produtoBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -242,6 +240,5 @@
         private DataGridViewTextBoxColumn Preco;
         private DataGridViewTextBoxColumn Estoque;
         private DataGridViewTextBoxColumn CodigoDeBarras;
-        private BindingSource produtoBindingSource;
     }
 }

@@ -32,7 +32,6 @@ namespace UIWinFormsApp
                 MessageBox.Show(ex.Message);
             }
         }
-
         private void buttonInserir_Click(object sender, EventArgs e)
         {
             using (FormCadastrarUsuario frm = new FormCadastrarUsuario())
@@ -46,10 +45,8 @@ namespace UIWinFormsApp
             using (FormCadastrarUsuario frm = new FormCadastrarUsuario(id))
             {
                 frm.ShowDialog();
-
             }
         }
-
         private void buttonExcluir_Click(object sender, EventArgs e)
         {
             if (MessageBox.Show("Deseja realmente excluir este registro?","Atenção", MessageBoxButtons.YesNo) == DialogResult.No)
@@ -59,6 +56,11 @@ namespace UIWinFormsApp
             new UsuarioBLL().Excluir(id);
             bindingSourceUsuario.RemoveCurrent();
             MessageBox.Show("Registro excluído com sucesso!");
+        }
+        private void FormBuscarUsuario_Load(object sender, EventArgs e)
+        {
+            comboBoxBuscarPor.SelectedIndex = comboBoxBuscarPor.Items.Count - 1;
+            buttonBuscar_Click(null, null);
         }
     }
 }
