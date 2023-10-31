@@ -7,10 +7,7 @@ namespace UIWinFormsApp
             InitializeComponent();
         }
 
-        private void Form1_Load(object sender, EventArgs e)
-        {
 
-        }
         private void usuariosToolStripMenuItem_Click(object sender, EventArgs e)
         {
             using (FormBuscarUsuario frm = new FormBuscarUsuario())
@@ -30,6 +27,25 @@ namespace UIWinFormsApp
             using (FormBuscarCliente frm = new FormBuscarCliente())
             {
                 frm.ShowDialog();
+            }
+        }
+        private void FormPrincipal_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Escape)
+            {
+                this.Close();
+            }
+
+        }
+        private void FormPrincipal_Load(object sender, EventArgs e)
+        {
+            using (FormLogin frm = new FormLogin())
+            {
+                frm.ShowDialog();
+
+                if (!frm.Autenticou)
+                    this.Close();
+
             }
         }
     }

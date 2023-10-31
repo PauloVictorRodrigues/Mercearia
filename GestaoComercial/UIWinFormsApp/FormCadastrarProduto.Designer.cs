@@ -51,7 +51,7 @@
             this.textBoxNome.Location = new System.Drawing.Point(5, 100);
             this.textBoxNome.Name = "textBoxNome";
             this.textBoxNome.Size = new System.Drawing.Size(233, 27);
-            this.textBoxNome.TabIndex = 9;
+            this.textBoxNome.TabIndex = 0;
             // 
             // bindingSourceCadastro
             // 
@@ -71,7 +71,7 @@
             this.buttonCancelar.Location = new System.Drawing.Point(676, 415);
             this.buttonCancelar.Name = "buttonCancelar";
             this.buttonCancelar.Size = new System.Drawing.Size(94, 29);
-            this.buttonCancelar.TabIndex = 15;
+            this.buttonCancelar.TabIndex = 5;
             this.buttonCancelar.Text = "&Cancelar";
             this.buttonCancelar.UseVisualStyleBackColor = true;
             // 
@@ -80,7 +80,7 @@
             this.button1.Location = new System.Drawing.Point(576, 415);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(94, 29);
-            this.button1.TabIndex = 16;
+            this.button1.TabIndex = 4;
             this.button1.Text = "&Salvar";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
@@ -91,7 +91,7 @@
             this.label5.Font = new System.Drawing.Font("Segoe UI", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label5.Location = new System.Drawing.Point(0, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(800, 53);
+            this.label5.Size = new System.Drawing.Size(780, 53);
             this.label5.TabIndex = 14;
             this.label5.Text = "Cadastrar produto";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -102,7 +102,7 @@
             this.textBoxConfirmacaoSenha.Location = new System.Drawing.Point(160, 156);
             this.textBoxConfirmacaoSenha.Name = "textBoxConfirmacaoSenha";
             this.textBoxConfirmacaoSenha.Size = new System.Drawing.Size(201, 27);
-            this.textBoxConfirmacaoSenha.TabIndex = 10;
+            this.textBoxConfirmacaoSenha.TabIndex = 3;
             // 
             // textBoxNomeUsuario
             // 
@@ -110,7 +110,7 @@
             this.textBoxNomeUsuario.Location = new System.Drawing.Point(244, 100);
             this.textBoxNomeUsuario.Name = "textBoxNomeUsuario";
             this.textBoxNomeUsuario.Size = new System.Drawing.Size(117, 27);
-            this.textBoxNomeUsuario.TabIndex = 11;
+            this.textBoxNomeUsuario.TabIndex = 1;
             // 
             // label4
             // 
@@ -136,7 +136,7 @@
             this.textBoxSenha.Location = new System.Drawing.Point(5, 156);
             this.textBoxSenha.Name = "textBoxSenha";
             this.textBoxSenha.Size = new System.Drawing.Size(149, 27);
-            this.textBoxSenha.TabIndex = 12;
+            this.textBoxSenha.TabIndex = 2;
             // 
             // label3
             // 
@@ -151,7 +151,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(780, 450);
             this.Controls.Add(this.textBoxNome);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.buttonCancelar);
@@ -163,7 +163,13 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.textBoxSenha);
             this.Controls.Add(this.label3);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "FormCadastrarProduto";
+            this.ShowIcon = false;
+            this.ShowInTaskbar = false;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormCadastrarProduto";
             ((System.ComponentModel.ISupportInitialize)(this.bindingSourceCadastro)).EndInit();
             this.ResumeLayout(false);

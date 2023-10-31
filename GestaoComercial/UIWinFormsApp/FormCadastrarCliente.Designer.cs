@@ -46,7 +46,7 @@
             this.textBoxNome.Location = new System.Drawing.Point(5, 100);
             this.textBoxNome.Name = "textBoxNome";
             this.textBoxNome.Size = new System.Drawing.Size(322, 27);
-            this.textBoxNome.TabIndex = 9;
+            this.textBoxNome.TabIndex = 0;
             // 
             // bindingSourceCadastro
             // 
@@ -63,19 +63,19 @@
             // 
             // buttonCancelar
             // 
-            this.buttonCancelar.Location = new System.Drawing.Point(521, 362);
+            this.buttonCancelar.Location = new System.Drawing.Point(530, 362);
             this.buttonCancelar.Name = "buttonCancelar";
             this.buttonCancelar.Size = new System.Drawing.Size(94, 29);
-            this.buttonCancelar.TabIndex = 15;
+            this.buttonCancelar.TabIndex = 3;
             this.buttonCancelar.Text = "&Cancelar";
             this.buttonCancelar.UseVisualStyleBackColor = true;
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(421, 362);
+            this.button1.Location = new System.Drawing.Point(430, 362);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(94, 29);
-            this.button1.TabIndex = 16;
+            this.button1.TabIndex = 2;
             this.button1.Text = "&Salvar";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
@@ -86,7 +86,7 @@
             this.label5.Font = new System.Drawing.Font("Segoe UI", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label5.Location = new System.Drawing.Point(0, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(628, 53);
+            this.label5.Size = new System.Drawing.Size(636, 53);
             this.label5.TabIndex = 14;
             this.label5.Text = "Cadastrar cliente";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -97,7 +97,7 @@
             this.textBoxFone.Location = new System.Drawing.Point(5, 158);
             this.textBoxFone.Name = "textBoxFone";
             this.textBoxFone.Size = new System.Drawing.Size(322, 27);
-            this.textBoxFone.TabIndex = 11;
+            this.textBoxFone.TabIndex = 1;
             // 
             // label2
             // 
@@ -112,7 +112,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(628, 398);
+            this.ClientSize = new System.Drawing.Size(636, 398);
             this.Controls.Add(this.textBoxNome);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.buttonCancelar);
@@ -120,7 +120,13 @@
             this.Controls.Add(this.label5);
             this.Controls.Add(this.textBoxFone);
             this.Controls.Add(this.label2);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "FormCadastrarCliente";
+            this.ShowIcon = false;
+            this.ShowInTaskbar = false;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormCadastrarCliente";
             ((System.ComponentModel.ISupportInitialize)(this.bindingSourceCadastro)).EndInit();
             this.ResumeLayout(false);

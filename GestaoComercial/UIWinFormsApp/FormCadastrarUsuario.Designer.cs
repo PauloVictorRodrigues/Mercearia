@@ -60,7 +60,7 @@
             this.textBoxNome.Location = new System.Drawing.Point(5, 94);
             this.textBoxNome.Name = "textBoxNome";
             this.textBoxNome.Size = new System.Drawing.Size(370, 27);
-            this.textBoxNome.TabIndex = 1;
+            this.textBoxNome.TabIndex = 0;
             // 
             // bindingSourceCadastro
             // 
@@ -98,7 +98,7 @@
             this.textBoxSenha.Location = new System.Drawing.Point(5, 149);
             this.textBoxSenha.Name = "textBoxSenha";
             this.textBoxSenha.Size = new System.Drawing.Size(222, 27);
-            this.textBoxSenha.TabIndex = 1;
+            this.textBoxSenha.TabIndex = 2;
             // 
             // label4
             // 
@@ -114,7 +114,7 @@
             this.textBoxConfirmacaoSenha.Location = new System.Drawing.Point(233, 150);
             this.textBoxConfirmacaoSenha.Name = "textBoxConfirmacaoSenha";
             this.textBoxConfirmacaoSenha.Size = new System.Drawing.Size(257, 27);
-            this.textBoxConfirmacaoSenha.TabIndex = 1;
+            this.textBoxConfirmacaoSenha.TabIndex = 3;
             // 
             // checkBoxAtivo
             // 
@@ -123,7 +123,7 @@
             this.checkBoxAtivo.Location = new System.Drawing.Point(496, 150);
             this.checkBoxAtivo.Name = "checkBoxAtivo";
             this.checkBoxAtivo.Size = new System.Drawing.Size(66, 24);
-            this.checkBoxAtivo.TabIndex = 2;
+            this.checkBoxAtivo.TabIndex = 4;
             this.checkBoxAtivo.Text = "Ativo";
             this.checkBoxAtivo.UseVisualStyleBackColor = true;
             // 
@@ -133,7 +133,7 @@
             this.label5.Font = new System.Drawing.Font("Segoe UI", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label5.Location = new System.Drawing.Point(0, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(773, 53);
+            this.label5.Size = new System.Drawing.Size(786, 53);
             this.label5.TabIndex = 3;
             this.label5.Text = "Cadastrar usuário";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -143,7 +143,7 @@
             this.button1.Location = new System.Drawing.Point(576, 409);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(94, 29);
-            this.button1.TabIndex = 4;
+            this.button1.TabIndex = 5;
             this.button1.Text = "&Salvar";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
@@ -153,7 +153,7 @@
             this.buttonCancelar.Location = new System.Drawing.Point(676, 409);
             this.buttonCancelar.Name = "buttonCancelar";
             this.buttonCancelar.Size = new System.Drawing.Size(94, 29);
-            this.buttonCancelar.TabIndex = 4;
+            this.buttonCancelar.TabIndex = 6;
             this.buttonCancelar.Text = "&Cancelar";
             this.buttonCancelar.UseVisualStyleBackColor = true;
             this.buttonCancelar.Click += new System.EventHandler(this.button1_Click);
@@ -163,7 +163,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.buttonCancelar;
-            this.ClientSize = new System.Drawing.Size(773, 450);
+            this.ClientSize = new System.Drawing.Size(786, 447);
             this.Controls.Add(this.buttonCancelar);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label5);
@@ -176,7 +176,13 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.textBoxNome);
             this.Controls.Add(this.label1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "FormCadastrarUsuario";
+            this.ShowIcon = false;
+            this.ShowInTaskbar = false;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormCadastrarUsuario";
             ((System.ComponentModel.ISupportInitialize)(this.bindingSourceCadastro)).EndInit();
             this.ResumeLayout(false);
